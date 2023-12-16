@@ -7,9 +7,7 @@ public:
             delete head;
             return NULL;
         }
-        ListNode* slow = head;
-        ListNode* fast = head;
-        ListNode* prev = head;
+        auto slow = head, fast = head, prev = head;
 
         while(fast != NULL && fast -> next != NULL){
             if(slow != head) prev = prev -> next;
